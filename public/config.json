@@ -1,0 +1,72 @@
+{
+    "title": {
+        "type": "text",
+        "label": "Todo List Title",
+        "value": "Today's Plan"
+    },
+    "defaultMessage": {
+        "type": "text",
+        "label": "Default message when list is empty",
+        "value": "Nothing on the docket. '!todo add something' to add 'something'"
+    },
+    "fontFamily": {
+        "type": "googleFont",
+        "label": "Select a font:",
+        "value": "Roboto"
+    },
+    "fontSize": {
+        "type": "number",
+        "label": "Text font size (px)",
+        "value": 30
+    },
+    "fontColor": {
+        "type": "colorpicker",
+        "label": "Font Color",
+        "value": "#FFFFFF"
+    },
+    "xColor": {
+        "type": "colorpicker",
+        "label": "Cross-out color",
+        "value": "#FF0000"
+    },
+    "xShadowColor": {
+        "type": "colorpicker",
+        "label": "Cross-out shadow color",
+        "value": "#310000"
+    },
+    "xStrokeWidth": {
+        "type": "number",
+        "label": "Cross-out thickness",
+        "value": 2
+    },
+    "xDuration": {
+        "type": "number",
+        "label": "Cross-out duration (for one line)",
+        "value": 250
+    },
+    "xDelay": {
+        "type": "number",
+        "label": "Cross-out delay (second line, from start)",
+        "value": 320
+    },
+    "invokeCommand": {
+        "type": "text",
+        "label": "Command to invoke todo list, e.g. !todo (do not add the !)",
+        "value": "todo"
+    },
+    "invokePermissions": {
+        "type": "dropdown",
+        "label": "Who can invoke?",
+        "value": "streamer",
+        "options": {
+            "streamer": "Streamer only",
+            "moderator": "Moderators and above",
+            "vip": "VIPs and above",
+            "subscriber": "Subscribers and above"
+        }
+    },
+    "widgetName": {
+        "type": "hidden",
+        "value": "Todo List"
+    }
+}
