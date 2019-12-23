@@ -1,0 +1,69 @@
+.container {
+    color: {{fontColor}};
+    font-size: {{fontSize}}px;
+    font-family: {{fontFamily}};
+    box-sizing: border-box;
+    padding: 1em;
+    padding-bottom: 4em;
+    width: 100%
+}
+
+.divider {
+    height: 0.2em;
+    max-height: 0.2em;
+    min-height: 0.2em;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: {{fontColor}};
+    box-shadow: -0.1em 0.1em 0.1em rgba(0, 0, 0, 0.5), 0 0 0.1em #000
+}
+
+h1 {
+    margin: 0;
+    padding: 0.5em 0;
+    text-shadow: -0.05em 0.05em 0.1em #000, 0 0 0.05em #000
+}
+
+p {
+    font-size: 1.5em;
+    text-shadow: -0.04em 0.04em 0.1em #000, 0 0 0.03em #000, 0 0 0.03em #000;
+    font-weight: bold;
+    margin: 0.5em 0;
+    padding: 0 0.5em
+}
+
+span.index {
+    display: inline-block;
+    position: absolute;
+    width: 2em;
+    text-align: right;
+    margin-right: 0.3em
+}
+
+.item-container {
+    position: relative;
+    display: inline-block
+}
+
+.text {
+    display: inline-block;
+    padding: 0 0.5em 0 2.5em
+}
+
+.cross {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0.1em;
+    overflow: show;
+    position: absolute;
+    z-index: 1;
+    box-sizing: border-box
+}
+
+svg {
+    display: block;
+    width: 100%;
+    height: 100%
+}
