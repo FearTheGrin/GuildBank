@@ -61,3 +61,31 @@ button:active {
 button:focus {
 	border-color: #666;
 }
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+	width: 80%;
+}
+
+td {
+	padding: 0.25em;
+	margin:0;
+}
+
+tr {
+	background-color: #393939;
+}
+
+thead tr, thead tr:hover, tr:nth-child(even) {
+	background-color: #434343;
+}
+
+tr:hover {
+	background-color: #555;
+}
+
+td.qty {
+	text-align: center;
+	width: 3em;
+}
