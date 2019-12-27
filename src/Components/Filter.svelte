@@ -81,7 +81,8 @@ let recipeSubtypes = new FilterList('RecipeSubType',[
   ['Enchanting'],
   ['Engineering'],
   ['Leatherworking'],
-  ['Tailoring']
+  ['Tailoring'],
+  ['Book']
 
 ], 'subType');
 

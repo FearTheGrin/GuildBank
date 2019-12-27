@@ -425,7 +425,7 @@
       }
   }
 
-  var data = {"updated":1577426517, "gold":{"copper":85, "silver":16, "gold":65}, "bank":[{"capacity":24, "bagName":"Bank", "contents":[{"type":"Trade Goods", "rarity":1, "slot":1, "id":2836, "subType":"Trade Goods", "name":"Coarse Stone", "count":5, "icon":135235, "container":-1}, {"type":"Recipe", "rarity":3, "slot":2, "id":17682, "subType":"Book", "minLevel":50, "count":1, "name":"Book: Gift of the Wild", "icon":133743, "container":-1}, {"equipLoc":"INVTYPE_RANGED", "type":"Weapon", "rarity":2, "slot":3, "id":15285, "subType":"Bows", "minLevel":27, "count":1, "name":"Archer's Longbow", "icon":135491, "container":-1}, {"equipLoc":"INVTYPE_SHOULDER", "type":"Armor", "rarity":2, "slot":4, "id":5964, "subType":"Leather", "minLevel":30, "count":1, "name":"Barbaric Shoulders", "icon":135039, "container":-1}, {"type":"Recipe", "rarity":2, "slot":5, "id":3395, "subType":"Alchemy", "name":"Recipe: Limited Invulnerability Potion", "count":1, "icon":134939, "container":-1}, {"type":"Recipe", "rarity":2, "slot":6, "id":3874, "subType":"Blacksmithing", "name":"Plans: Polished Steel Boots", "count":1, "icon":134942, "container":-1}, {"type":"Consumable", "rarity":1, "slot":7, "id":6051, "subType":"Consumable", "minLevel":10, "count":5, "name":"Holy Protection Potion", "icon":134720, "container":-1}, {"equipLoc":"INVTYPE_BAG", "type":"Container", "rarity":1, "slot":8, "id":14046, "subType":"Bag", "name":"Runecloth Bag", "count":1, "icon":133652, "container":-1}, {"type":"Recipe", "rarity":3, "slot":9, "id":17414, "subType":"Book", "minLevel":60, "count":1, "name":"Codex: Prayer of Fortitude II", "icon":133741, "container":-1}, {"type":"Recipe", "rarity":2, "slot":10, "id":3395, "subType":"Alchemy", "name":"Recipe: Limited Invulnerability Potion", "count":1, "icon":134939, "container":-1}, {"type":"Trade Goods", "rarity":1, "slot":11, "id":2838, "subType":"Trade Goods", "name":"Heavy Stone", "count":2, "icon":135238, "container":-1}, {"equipLoc":"INVTYPE_BAG", "type":"Container", "rarity":1, "slot":12, "id":14046, "subType":"Bag", "name":"Runecloth Bag", "count":1, "icon":133652, "container":-1}, {"equipLoc":"INVTYPE_BAG", "type":"Container", "rarity":1, "slot":13, "id":14046, "subType":"Bag", "name":"Runecloth Bag", "count":1, "icon":133652, "container":-1}, {"type":"Recipe", "rarity":1, "slot":14, "id":16072, "subType":"Cooking", "name":"Expert Cookbook", "count":1, "icon":133740, "container":-1}, {"type":"Recipe", "rarity":1, "slot":15, "id":16072, "subType":"Cooking", "name":"Expert Cookbook", "count":1, "icon":133740, "container":-1}, {"type":"Recipe", "rarity":1, "slot":16, "id":16072, "subType":"Cooking", "name":"Expert Cookbook", "count":1, "icon":133740, "container":-1}, {"type":"Recipe", "rarity":1, "slot":17, "id":16084, "subType":"First Aid", "name":"Expert First Aid - Under Wraps", "count":1, "icon":133740, "container":-1}, {"type":"Recipe", "rarity":1, "slot":18, "id":16084, "subType":"First Aid", "name":"Expert First Aid - Under Wraps", "count":1, "icon":133740, "container":-1}, {"type":"Recipe", "rarity":1, "slot":19, "id":16084, "subType":"First Aid", "name":"Expert First Aid - Under Wraps", "count":1, "icon":133740, "container":-1}, {"type":"Recipe", "rarity":1, "slot":20, "id":16113, "subType":"First Aid", "name":"Manual: Mageweave Bandage", "count":1, "icon":133735, "container":-1}, {"type":"Recipe", "rarity":1, "slot":21, "id":16084, "subType":"First Aid", "name":"Expert First Aid - Under Wraps", "count":1, "icon":133740, "container":-1}, {"type":"Trade Goods", "rarity":1, "slot":22, "id":8836, "subType":"Trade Goods", "name":"Arthas' Tears", "count":1, "icon":134194, "container":-1}, {"equipLoc":"INVTYPE_FEET", "type":"Armor", "rarity":2, "slot":23, "id":10211, "subType":"Cloth", "minLevel":54, "count":1, "name":"Elegant Boots", "icon":132536, "container":-1}, {"type":"Recipe", "rarity":2, "slot":24, "id":15761, "subType":"Leatherworking", "name":"Pattern: Frostsaber Gloves", "count":1, "icon":134942, "container":-1}], "container":-1}, {"capacity":14, "bagName":"Runecloth Bag", "contents":[{"type":"Recipe", "rarity":2, "slot":1, "id":2407, "subType":"Leatherworking", "name":"Pattern: White Leather Jerkin", "count":1, "icon":134939, "container":5}, {"type":"Trade Goods", "rarity":1, "slot":2, "id":9262, "subType":"Trade Goods", "name":"Black Vitriol", "count":1, "icon":134133, "container":5}, {"type":"Recipe", "rarity":2, "slot":3, "id":6716, "subType":"Engineering", "name":"Schematic: EZ-Thro Dynamite", "count":1, "icon":134942, "container":5}, {"type":"Recipe", "rarity":2, "slot":4, "id":16245, "subType":"Enchanting", "name":"Formula: Enchant Boots - Greater Agility", "count":1, "icon":134327, "container":5}, {"equipLoc":"INVTYPE_TABARD", "type":"Armor", "rarity":1, "slot":5, "id":5976, "subType":"Miscellaneous", "name":"Guild Tabard", "count":1, "icon":135026, "container":5}, {"type":"Consumable", "rarity":1, "slot":6, "id":1710, "subType":"Consumable", "minLevel":21, "count":5, "name":"Greater Healing Potion", "icon":134832, "container":5}, {"type":"Consumable", "rarity":1, "slot":7, "id":3827, "subType":"Consumable", "minLevel":22, "count":5, "name":"Mana Potion", "icon":134852, "container":5}, {"type":"Consumable", "rarity":1, "slot":8, "id":3827, "subType":"Consumable", "minLevel":22, "count":1, "name":"Mana Potion", "icon":134852, "container":5}, {"type":"Consumable", "rarity":1, "slot":9, "id":1710, "subType":"Consumable", "minLevel":21, "count":5, "name":"Greater Healing Potion", "icon":134832, "container":5}, {"type":"Trade Goods", "rarity":1, "slot":10, "id":4461, "subType":"Trade Goods", "name":"Raptor Hide", "count":4, "icon":134303, "container":5}, {"type":"Recipe", "rarity":2, "slot":11, "id":9294, "subType":"Alchemy", "name":"Recipe: Wildvine Potion", "count":1, "icon":134942, "container":5}, {"type":"Trade Goods", "rarity":2, "slot":12, "id":3864, "subType":"Trade Goods", "name":"Citrine", "count":1, "icon":134117, "container":5}, {"type":"Recipe", "rarity":2, "slot":13, "id":4409, "subType":"Engineering", "name":"Schematic: Small Seaforium Charge", "count":1, "icon":134942, "container":5}, {"type":"Reagent", "rarity":1, "slot":14, "id":6470, "subType":"Reagent", "name":"Deviate Scale", "count":3, "icon":134304, "container":5}], "container":5}, {"capacity":14, "bagName":"Runecloth Bag", "contents":[{"type":"Trade Goods", "rarity":1, "slot":1, "id":2318, "subType":"Trade Goods", "name":"Light Leather", "count":8, "icon":134252, "container":6}, {"type":"Consumable", "rarity":1, "slot":2, "id":858, "subType":"Consumable", "minLevel":3, "count":2, "name":"Lesser Healing Potion", "icon":134830, "container":6}, {"type":"Recipe", "rarity":2, "slot":3, "id":10316, "subType":"Tailoring", "name":"Pattern: Colorful Kilt", "count":1, "icon":134942, "container":6}, {"type":"Recipe", "rarity":2, "slot":4, "id":15743, "subType":"Leatherworking", "name":"Pattern: Heavy Scorpid Belt", "count":1, "icon":134939, "container":6}, {"type":"Consumable", "rarity":1, "slot":5, "id":15564, "subType":"Consumable", "minLevel":40, "count":3, "name":"Rugged Armor Kit", "icon":133604, "container":6}, {"type":"Trade Goods", "rarity":1, "slot":6, "id":8169, "subType":"Trade Goods", "name":"Thick Hide", "count":9, "icon":134356, "container":6}, {"type":"Miscellaneous", "rarity":1, "slot":7, "id":8165, "subType":"Junk", "name":"Worn Dragonscale", "count":6, "icon":134319, "container":6}, {"type":"Trade Goods", "rarity":1, "slot":8, "id":15419, "subType":"Trade Goods", "name":"Warbear Leather", "count":2, "icon":134360, "container":6}, {"type":"Miscellaneous", "rarity":1, "slot":9, "id":8154, "subType":"Junk", "name":"Scorpid Scale", "count":5, "icon":134304, "container":6}, {"type":"Trade Goods", "rarity":1, "slot":10, "id":4232, "subType":"Trade Goods", "name":"Medium Hide", "count":1, "icon":134364, "container":6}, {"type":"Trade Goods", "rarity":1, "slot":11, "id":4233, "subType":"Trade Goods", "name":"Cured Medium Hide", "count":3, "icon":134354, "container":6}, {"type":"Miscellaneous", "rarity":1, "slot":12, "id":15412, "subType":"Junk", "name":"Green Dragonscale", "count":4, "icon":134313, "container":6}, {"type":"Trade Goods", "rarity":1, "slot":13, "id":8150, "subType":"Trade Goods", "name":"Deeprock Salt", "count":20, "icon":133849, "container":6}, {"type":"Trade Goods", "rarity":1, "slot":14, "id":8150, "subType":"Trade Goods", "name":"Deeprock Salt", "count":20, "icon":133849, "container":6}], "container":6}, {"capacity":14, "bagName":"Runecloth Bag", "contents":[{"type":"Trade Goods", "rarity":1, "slot":1, "id":8150, "subType":"Trade Goods", "name":"Deeprock Salt", "count":20, "icon":133849, "container":7}, {"type":"Trade Goods", "rarity":1, "slot":2, "id":8146, "subType":"Trade Goods", "name":"Wicked Claw", "count":5, "icon":134294, "container":7}, {"type":"Trade Goods", "rarity":1, "slot":3, "id":8146, "subType":"Trade Goods", "name":"Wicked Claw", "count":4, "icon":134294, "container":7}, {"type":"Trade Goods", "rarity":1, "slot":4, "id":8153, "subType":"Trade Goods", "name":"Wildvine", "count":1, "icon":134183, "container":7}, {"type":"Trade Goods", "rarity":1, "slot":5, "id":8171, "subType":"Trade Goods", "name":"Rugged Hide", "count":1, "icon":134357, "container":7}, {"type":"Trade Goods", "rarity":2, "slot":6, "id":1529, "subType":"Trade Goods", "name":"Jade", "count":2, "icon":134134, "container":7}, {"type":"Recipe", "rarity":2, "slot":7, "id":10312, "subType":"Tailoring", "name":"Pattern: Red Mageweave Gloves", "count":1, "icon":134942, "container":7}, {"type":"Recipe", "rarity":2, "slot":8, "id":10300, "subType":"Tailoring", "name":"Pattern: Red Mageweave Vest", "count":1, "icon":134942, "container":7}, {"type":"Trade Goods", "rarity":1, "slot":9, "id":7912, "subType":"Trade Goods", "name":"Solid Stone", "count":3, "icon":135236, "container":7}, {"type":"Trade Goods", "rarity":1, "slot":10, "id":3818, "subType":"Trade Goods", "name":"Fadeleaf", "count":1, "icon":134193, "container":7}, {"type":"Trade Goods", "rarity":1, "slot":11, "id":785, "subType":"Trade Goods", "name":"Mageroyal", "count":1, "icon":133436, "container":7}, {"type":"Trade Goods", "rarity":1, "slot":12, "id":5637, "subType":"Trade Goods", "name":"Large Fang", "count":1, "icon":133725, "container":7}, {"type":"Trade Goods", "rarity":1, "slot":13, "id":4304, "subType":"Trade Goods", "name":"Thick Leather", "count":2, "icon":134257, "container":7}, {"type":"Recipe", "rarity":1, "slot":14, "id":16112, "subType":"First Aid", "name":"Manual: Heavy Silk Bandage", "count":1, "icon":133735, "container":7}], "container":7}, {"capacity":14, "bagName":"Runecloth Bag", "contents":[{"type":"Recipe", "rarity":1, "slot":1, "id":16084, "subType":"First Aid", "name":"Expert First Aid - Under Wraps", "count":1, "icon":133740, "container":8}, {"type":"Recipe", "rarity":1, "slot":2, "id":3830, "subType":"Alchemy", "name":"Recipe: Elixir of Fortitude", "count":1, "icon":134939, "container":8}, {"type":"Recipe", "rarity":3, "slot":3, "id":18600, "subType":"Book", "minLevel":56, "count":1, "name":"Tome of Arcane Brilliance", "icon":133739, "container":8}, {"type":"Recipe", "rarity":2, "slot":4, "id":11166, "subType":"Enchanting", "name":"Formula: Enchant Gloves - Skinning", "count":1, "icon":134327, "container":8}, {"type":"Recipe", "rarity":2, "slot":5, "id":11204, "subType":"Enchanting", "name":"Formula: Enchant Bracer - Greater Spirit", "count":1, "icon":134327, "container":8}], "container":8}, {"capacity":0, "contents":{}, "container":9}, {"capacity":0, "contents":{}, "container":10}]};
+  var data = {"updated":1577437477, "gold":{"copper":85, "silver":16, "gold":65}, "bank":[{"capacity":24, "bagName":"Bank", "contents":[{"type":"Trade Goods", "rarity":1, "slot":1, "id":2836, "subType":"Trade Goods", "name":"Coarse Stone", "count":5, "icon":135235, "container":-1}, {"type":"Recipe", "rarity":3, "slot":2, "id":17682, "subType":"Book", "minLevel":50, "count":1, "name":"Book: Gift of the Wild", "icon":133743, "container":-1}, {"equipLoc":"INVTYPE_RANGED", "type":"Weapon", "rarity":2, "slot":3, "id":15285, "subType":"Bows", "minLevel":27, "count":1, "name":"Archer's Longbow", "icon":135491, "container":-1}, {"equipLoc":"INVTYPE_SHOULDER", "type":"Armor", "rarity":2, "slot":4, "id":5964, "subType":"Leather", "minLevel":30, "count":1, "name":"Barbaric Shoulders", "icon":135039, "container":-1}, {"type":"Recipe", "rarity":2, "slot":5, "id":3395, "subType":"Alchemy", "name":"Recipe: Limited Invulnerability Potion", "count":1, "icon":134939, "container":-1}, {"type":"Recipe", "rarity":2, "slot":6, "id":3874, "subType":"Blacksmithing", "name":"Plans: Polished Steel Boots", "count":1, "icon":134942, "container":-1}, {"type":"Consumable", "rarity":1, "slot":7, "id":6051, "subType":"Consumable", "minLevel":10, "count":5, "name":"Holy Protection Potion", "icon":134720, "container":-1}, {"equipLoc":"INVTYPE_BAG", "type":"Container", "rarity":1, "slot":8, "id":14046, "subType":"Bag", "name":"Runecloth Bag", "count":1, "icon":133652, "container":-1}, {"type":"Recipe", "rarity":3, "slot":9, "id":17414, "subType":"Book", "minLevel":60, "count":1, "name":"Codex: Prayer of Fortitude II", "icon":133741, "container":-1}, {"type":"Recipe", "rarity":2, "slot":10, "id":3395, "subType":"Alchemy", "name":"Recipe: Limited Invulnerability Potion", "count":1, "icon":134939, "container":-1}, {"type":"Trade Goods", "rarity":1, "slot":11, "id":2838, "subType":"Trade Goods", "name":"Heavy Stone", "count":2, "icon":135238, "container":-1}, {"equipLoc":"INVTYPE_BAG", "type":"Container", "rarity":1, "slot":12, "id":14046, "subType":"Bag", "name":"Runecloth Bag", "count":1, "icon":133652, "container":-1}, {"equipLoc":"INVTYPE_BAG", "type":"Container", "rarity":1, "slot":13, "id":14046, "subType":"Bag", "name":"Runecloth Bag", "count":1, "icon":133652, "container":-1}, {"type":"Recipe", "rarity":1, "slot":14, "id":16072, "subType":"Cooking", "name":"Expert Cookbook", "count":1, "icon":133740, "container":-1}, {"type":"Recipe", "rarity":1, "slot":15, "id":16072, "subType":"Cooking", "name":"Expert Cookbook", "count":1, "icon":133740, "container":-1}, {"type":"Recipe", "rarity":1, "slot":16, "id":16072, "subType":"Cooking", "name":"Expert Cookbook", "count":1, "icon":133740, "container":-1}, {"type":"Recipe", "rarity":1, "slot":17, "id":16084, "subType":"First Aid", "name":"Expert First Aid - Under Wraps", "count":1, "icon":133740, "container":-1}, {"type":"Recipe", "rarity":1, "slot":18, "id":16084, "subType":"First Aid", "name":"Expert First Aid - Under Wraps", "count":1, "icon":133740, "container":-1}, {"type":"Recipe", "rarity":1, "slot":19, "id":16084, "subType":"First Aid", "name":"Expert First Aid - Under Wraps", "count":1, "icon":133740, "container":-1}, {"type":"Recipe", "rarity":1, "slot":20, "id":16113, "subType":"First Aid", "name":"Manual: Mageweave Bandage", "count":1, "icon":133735, "container":-1}, {"type":"Recipe", "rarity":1, "slot":21, "id":16084, "subType":"First Aid", "name":"Expert First Aid - Under Wraps", "count":1, "icon":133740, "container":-1}, {"type":"Trade Goods", "rarity":1, "slot":22, "id":8836, "subType":"Trade Goods", "name":"Arthas' Tears", "count":1, "icon":134194, "container":-1}, {"equipLoc":"INVTYPE_FEET", "type":"Armor", "rarity":2, "slot":23, "id":10211, "subType":"Cloth", "minLevel":54, "count":1, "name":"Elegant Boots", "icon":132536, "container":-1}, {"type":"Recipe", "rarity":2, "slot":24, "id":15761, "subType":"Leatherworking", "name":"Pattern: Frostsaber Gloves", "count":1, "icon":134942, "container":-1}], "container":-1}, {"capacity":14, "bagName":"Runecloth Bag", "contents":[{"type":"Recipe", "rarity":2, "slot":1, "id":2407, "subType":"Leatherworking", "name":"Pattern: White Leather Jerkin", "count":1, "icon":134939, "container":5}, {"type":"Trade Goods", "rarity":1, "slot":2, "id":9262, "subType":"Trade Goods", "name":"Black Vitriol", "count":1, "icon":134133, "container":5}, {"type":"Recipe", "rarity":2, "slot":3, "id":6716, "subType":"Engineering", "name":"Schematic: EZ-Thro Dynamite", "count":1, "icon":134942, "container":5}, {"type":"Recipe", "rarity":2, "slot":4, "id":16245, "subType":"Enchanting", "name":"Formula: Enchant Boots - Greater Agility", "count":1, "icon":134327, "container":5}, {"equipLoc":"INVTYPE_TABARD", "type":"Armor", "rarity":1, "slot":5, "id":5976, "subType":"Miscellaneous", "name":"Guild Tabard", "count":1, "icon":135026, "container":5}, {"type":"Consumable", "rarity":1, "slot":6, "id":1710, "subType":"Consumable", "minLevel":21, "count":5, "name":"Greater Healing Potion", "icon":134832, "container":5}, {"type":"Consumable", "rarity":1, "slot":7, "id":3827, "subType":"Consumable", "minLevel":22, "count":5, "name":"Mana Potion", "icon":134852, "container":5}, {"type":"Consumable", "rarity":1, "slot":8, "id":3827, "subType":"Consumable", "minLevel":22, "count":1, "name":"Mana Potion", "icon":134852, "container":5}, {"type":"Consumable", "rarity":1, "slot":9, "id":1710, "subType":"Consumable", "minLevel":21, "count":5, "name":"Greater Healing Potion", "icon":134832, "container":5}, {"type":"Trade Goods", "rarity":1, "slot":10, "id":4461, "subType":"Trade Goods", "name":"Raptor Hide", "count":4, "icon":134303, "container":5}, {"type":"Recipe", "rarity":2, "slot":11, "id":9294, "subType":"Alchemy", "name":"Recipe: Wildvine Potion", "count":1, "icon":134942, "container":5}, {"type":"Trade Goods", "rarity":2, "slot":12, "id":3864, "subType":"Trade Goods", "name":"Citrine", "count":1, "icon":134117, "container":5}, {"type":"Recipe", "rarity":2, "slot":13, "id":4409, "subType":"Engineering", "name":"Schematic: Small Seaforium Charge", "count":1, "icon":134942, "container":5}, {"type":"Reagent", "rarity":1, "slot":14, "id":6470, "subType":"Reagent", "name":"Deviate Scale", "count":3, "icon":134304, "container":5}], "container":5}, {"capacity":14, "bagName":"Runecloth Bag", "contents":[{"type":"Trade Goods", "rarity":1, "slot":1, "id":2318, "subType":"Trade Goods", "name":"Light Leather", "count":8, "icon":134252, "container":6}, {"type":"Consumable", "rarity":1, "slot":2, "id":858, "subType":"Consumable", "minLevel":3, "count":2, "name":"Lesser Healing Potion", "icon":134830, "container":6}, {"type":"Recipe", "rarity":2, "slot":3, "id":10316, "subType":"Tailoring", "name":"Pattern: Colorful Kilt", "count":1, "icon":134942, "container":6}, {"type":"Recipe", "rarity":2, "slot":4, "id":15743, "subType":"Leatherworking", "name":"Pattern: Heavy Scorpid Belt", "count":1, "icon":134939, "container":6}, {"type":"Consumable", "rarity":1, "slot":5, "id":15564, "subType":"Consumable", "minLevel":40, "count":3, "name":"Rugged Armor Kit", "icon":133604, "container":6}, {"type":"Trade Goods", "rarity":1, "slot":6, "id":8169, "subType":"Trade Goods", "name":"Thick Hide", "count":9, "icon":134356, "container":6}, {"type":"Miscellaneous", "rarity":1, "slot":7, "id":8165, "subType":"Junk", "name":"Worn Dragonscale", "count":6, "icon":134319, "container":6}, {"type":"Trade Goods", "rarity":1, "slot":8, "id":15419, "subType":"Trade Goods", "name":"Warbear Leather", "count":2, "icon":134360, "container":6}, {"type":"Miscellaneous", "rarity":1, "slot":9, "id":8154, "subType":"Junk", "name":"Scorpid Scale", "count":5, "icon":134304, "container":6}, {"type":"Trade Goods", "rarity":1, "slot":10, "id":4232, "subType":"Trade Goods", "name":"Medium Hide", "count":1, "icon":134364, "container":6}, {"type":"Trade Goods", "rarity":1, "slot":11, "id":4233, "subType":"Trade Goods", "name":"Cured Medium Hide", "count":3, "icon":134354, "container":6}, {"type":"Miscellaneous", "rarity":1, "slot":12, "id":15412, "subType":"Junk", "name":"Green Dragonscale", "count":4, "icon":134313, "container":6}, {"type":"Trade Goods", "rarity":1, "slot":13, "id":8150, "subType":"Trade Goods", "name":"Deeprock Salt", "count":20, "icon":133849, "container":6}, {"type":"Trade Goods", "rarity":1, "slot":14, "id":8150, "subType":"Trade Goods", "name":"Deeprock Salt", "count":20, "icon":133849, "container":6}], "container":6}, {"capacity":14, "bagName":"Runecloth Bag", "contents":[{"type":"Trade Goods", "rarity":1, "slot":1, "id":8150, "subType":"Trade Goods", "name":"Deeprock Salt", "count":20, "icon":133849, "container":7}, {"type":"Trade Goods", "rarity":1, "slot":2, "id":8146, "subType":"Trade Goods", "name":"Wicked Claw", "count":5, "icon":134294, "container":7}, {"type":"Trade Goods", "rarity":1, "slot":3, "id":8146, "subType":"Trade Goods", "name":"Wicked Claw", "count":4, "icon":134294, "container":7}, {"type":"Trade Goods", "rarity":1, "slot":4, "id":8153, "subType":"Trade Goods", "name":"Wildvine", "count":1, "icon":134183, "container":7}, {"type":"Trade Goods", "rarity":1, "slot":5, "id":8171, "subType":"Trade Goods", "name":"Rugged Hide", "count":1, "icon":134357, "container":7}, {"type":"Trade Goods", "rarity":2, "slot":6, "id":1529, "subType":"Trade Goods", "name":"Jade", "count":2, "icon":134134, "container":7}, {"type":"Recipe", "rarity":2, "slot":7, "id":10312, "subType":"Tailoring", "name":"Pattern: Red Mageweave Gloves", "count":1, "icon":134942, "container":7}, {"type":"Recipe", "rarity":2, "slot":8, "id":10300, "subType":"Tailoring", "name":"Pattern: Red Mageweave Vest", "count":1, "icon":134942, "container":7}, {"type":"Trade Goods", "rarity":1, "slot":9, "id":7912, "subType":"Trade Goods", "name":"Solid Stone", "count":3, "icon":135236, "container":7}, {"type":"Trade Goods", "rarity":1, "slot":10, "id":3818, "subType":"Trade Goods", "name":"Fadeleaf", "count":1, "icon":134193, "container":7}, {"type":"Trade Goods", "rarity":1, "slot":11, "id":785, "subType":"Trade Goods", "name":"Mageroyal", "count":1, "icon":133436, "container":7}, {"type":"Trade Goods", "rarity":1, "slot":12, "id":5637, "subType":"Trade Goods", "name":"Large Fang", "count":1, "icon":133725, "container":7}, {"type":"Trade Goods", "rarity":1, "slot":13, "id":4304, "subType":"Trade Goods", "name":"Thick Leather", "count":2, "icon":134257, "container":7}, {"type":"Recipe", "rarity":1, "slot":14, "id":16112, "subType":"First Aid", "name":"Manual: Heavy Silk Bandage", "count":1, "icon":133735, "container":7}], "container":7}, {"capacity":14, "bagName":"Runecloth Bag", "contents":[{"type":"Recipe", "rarity":1, "slot":1, "id":16084, "subType":"First Aid", "name":"Expert First Aid - Under Wraps", "count":1, "icon":133740, "container":8}, {"type":"Recipe", "rarity":1, "slot":2, "id":3830, "subType":"Alchemy", "name":"Recipe: Elixir of Fortitude", "count":1, "icon":134939, "container":8}, {"type":"Recipe", "rarity":3, "slot":3, "id":18600, "subType":"Book", "minLevel":56, "count":1, "name":"Tome of Arcane Brilliance", "icon":133739, "container":8}, {"type":"Recipe", "rarity":2, "slot":4, "id":11166, "subType":"Enchanting", "name":"Formula: Enchant Gloves - Skinning", "count":1, "icon":134327, "container":8}, {"type":"Recipe", "rarity":2, "slot":5, "id":11204, "subType":"Enchanting", "name":"Formula: Enchant Bracer - Greater Spirit", "count":1, "icon":134327, "container":8}, {"type":"Recipe", "rarity":2, "slot":6, "id":18332, "subType":"Book", "minLevel":50, "count":1, "name":"Libram of Rapidity", "icon":133734, "container":8}], "container":8}, {"capacity":0, "contents":{}, "container":9}, {"capacity":0, "contents":{}, "container":10}]};
 
   /* src/Components/Item.svelte generated by Svelte v3.16.5 */
 
@@ -1082,7 +1082,7 @@
   	return child_ctx;
   }
 
-  // (199:6) {#if index === selectedFilters.length - 1}
+  // (200:6) {#if index === selectedFilters.length - 1}
   function create_if_block_1(ctx) {
   	let span;
   	let dispose;
@@ -1092,7 +1092,7 @@
   			span = element("span");
   			span.textContent = "X";
   			attr_dev(span, "class", "delete svelte-cvme3a");
-  			add_location(span, file$2, 199, 8, 5373);
+  			add_location(span, file$2, 200, 8, 5385);
   			dispose = listen_dev(span, "click", /*stepBack*/ ctx[4], false, false, false);
   		},
   		m: function mount(target, anchor) {
@@ -1109,14 +1109,14 @@
   		block,
   		id: create_if_block_1.name,
   		type: "if",
-  		source: "(199:6) {#if index === selectedFilters.length - 1}",
+  		source: "(200:6) {#if index === selectedFilters.length - 1}",
   		ctx
   	});
 
   	return block;
   }
 
-  // (196:2) {#each selectedFilters as selectedFilter, index}
+  // (197:2) {#each selectedFilters as selectedFilter, index}
   function create_each_block_1(ctx) {
   	let li;
   	let t0_value = /*selectedFilter*/ ctx[21] + "";
@@ -1131,7 +1131,7 @@
   			t1 = space();
   			if (if_block) if_block.c();
   			attr_dev(li, "class", "svelte-cvme3a");
-  			add_location(li, file$2, 196, 4, 5288);
+  			add_location(li, file$2, 197, 4, 5300);
   		},
   		m: function mount(target, anchor) {
   			insert_dev(target, li, anchor);
@@ -1165,14 +1165,14 @@
   		block,
   		id: create_each_block_1.name,
   		type: "each",
-  		source: "(196:2) {#each selectedFilters as selectedFilter, index}",
+  		source: "(197:2) {#each selectedFilters as selectedFilter, index}",
   		ctx
   	});
 
   	return block;
   }
 
-  // (204:2) {#if activeFilterOptions && activeFilterOptions.length}
+  // (205:2) {#if activeFilterOptions && activeFilterOptions.length}
   function create_if_block$1(ctx) {
   	let li;
   	let select;
@@ -1198,13 +1198,13 @@
 
   			option.__value = "";
   			option.value = option.__value;
-  			add_location(option, file$2, 206, 8, 5631);
+  			add_location(option, file$2, 207, 8, 5643);
   			attr_dev(select, "id", "categorySelector");
   			attr_dev(select, "class", "svelte-cvme3a");
   			if (/*currentSelectedItem*/ ctx[1] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[17].call(select));
-  			add_location(select, file$2, 205, 6, 5528);
+  			add_location(select, file$2, 206, 6, 5540);
   			attr_dev(li, "class", "svelte-cvme3a");
-  			add_location(li, file$2, 204, 4, 5517);
+  			add_location(li, file$2, 205, 4, 5529);
 
   			dispose = [
   				listen_dev(select, "change", /*select_change_handler*/ ctx[17]),
@@ -1261,14 +1261,14 @@
   		block,
   		id: create_if_block$1.name,
   		type: "if",
-  		source: "(204:2) {#if activeFilterOptions && activeFilterOptions.length}",
+  		source: "(205:2) {#if activeFilterOptions && activeFilterOptions.length}",
   		ctx
   	});
 
   	return block;
   }
 
-  // (208:8) {#each activeFilterOptions as filterEntry}
+  // (209:8) {#each activeFilterOptions as filterEntry}
   function create_each_block$1(ctx) {
   	let option;
   	let t_value = /*filterEntry*/ ctx[18].displayName + "";
@@ -1281,7 +1281,7 @@
   			t = text(t_value);
   			option.__value = option_value_value = /*filterEntry*/ ctx[18].displayName;
   			option.value = option.__value;
-  			add_location(option, file$2, 208, 10, 5724);
+  			add_location(option, file$2, 209, 10, 5736);
   		},
   		m: function mount(target, anchor) {
   			insert_dev(target, option, anchor);
@@ -1305,7 +1305,7 @@
   		block,
   		id: create_each_block$1.name,
   		type: "each",
-  		source: "(208:8) {#each activeFilterOptions as filterEntry}",
+  		source: "(209:8) {#each activeFilterOptions as filterEntry}",
   		ctx
   	});
 
@@ -1337,9 +1337,9 @@
   			t = space();
   			if (if_block) if_block.c();
   			attr_dev(ul, "class", "filter-tags svelte-cvme3a");
-  			add_location(ul, file$2, 194, 2, 5208);
+  			add_location(ul, file$2, 195, 2, 5220);
   			attr_dev(div, "class", "filters");
-  			add_location(div, file$2, 192, 0, 5128);
+  			add_location(div, file$2, 193, 0, 5140);
   		},
   		l: function claim(nodes) {
   			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1491,7 +1491,8 @@
   			["Enchanting"],
   			["Engineering"],
   			["Leatherworking"],
-  			["Tailoring"]
+  			["Tailoring"],
+  			["Book"]
   		],
   	"subType");
 
