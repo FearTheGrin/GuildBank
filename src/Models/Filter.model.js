@@ -4,9 +4,20 @@ export class FilterEntry {
   constructor(displayName, value, targetProperty) {
     this.displayName = displayName;
     this.value = value;
+    if (this.value.constructor === Array) {
+      this.filterOverride = this.multiFilter;
+    }
     this.targetProperty = targetProperty;
     this.log = new Logger('FilterEntry: '+displayName);
     // this.log.setLogLevel(5);
+  }
+
+  /**
+   *
+   * @param {Function} newFn - (item) => boolean
+   */
+  setFilterOverride(newFn) {
+    this.filterOverride = newFn;
   }
 
   /**
@@ -26,6 +37,23 @@ export class FilterEntry {
     return this.subFilter;
   }
 
+  __applyFilter(item) {
+    if (this.filterOverride) {
+      this.log.debug('Override!');
+      return this.filterOverride(item);
+    }
+    this.log.debug('Default simpleFilter!');
+    return this.simpleFilter(item);
+  }
+
+  multiFilter(item) {
+    let isMatch = this.value.reduce((a,b) => {
+      return a || item[this.targetProperty] === b;
+    }, false);
+    this.log.debug('multi filter:',item[this.targetProperty],'==',this.value,'?',isMatch);
+    return isMatch;
+  }
+
   simpleFilter(item) {
     let isMatch = item[this.targetProperty] === this.value;
     this.log.debug('Simple filter:',item[this.targetProperty],'==',this.value,'?',isMatch);
@@ -40,7 +68,7 @@ export class FilterEntry {
     // If we don't have a path, this is the last stop. Test it.
     if (!path || !path.length){
       this.log.debug('No path. Using simple filter.');
-      return this.simpleFilter(item);
+      return this.__applyFilter(item);
     }
 
     let id = path[0],
@@ -58,7 +86,7 @@ export class FilterEntry {
     // If the path ends here, test the item.
     if (!rest.length || !rest[0]){
       this.log.debug('Last stop. Returning simple.',rest);
-      return this.simpleFilter(item);
+      return this.__applyFilter(item);
     }
 
     // if we've got a subfilter, pass it down
@@ -69,7 +97,7 @@ export class FilterEntry {
 
     // default to simple filtering (not 100% if it is possible to get here but oh well)
     this.log.debug('Default fall-through behavior');
-    return this.simpleFilter(item);
+    return this.__applyFilter(item);
   }
 }
 

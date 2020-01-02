@@ -14,6 +14,9 @@ export let items = [];
       <td class="qty">Qty</td>
       <td></td>
       <td>Item Name</td>
+      <td>Type</td>
+      <td>Sub-Type</td>
+      <td>Level Req.</td>
     </tr>
   </thead>
   <tbody>

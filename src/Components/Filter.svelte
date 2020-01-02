@@ -13,6 +13,8 @@ const dispatch = createEventDispatcher();
 export let data = [];
 
 let selectedFilters = [];
+let textFilter = '';
+let isTextFilterStrict = false;
 
 const weaponTypes = new FilterList('Weapon', [
   ['One-Handed Axes','One-Handed Axes'],
@@ -90,7 +92,7 @@ const mainCategories = new FilterList('Type', [
   ['Armor', 'Armor', armorSubs],
   ['Container', 'Container'],
   ['Recipe', 'Recipe', recipeSubtypes],
-  ['Trade Goods', 'Trade Goods'],
+  ['Trade Goods', ['Trade Goods','Reagent']],
   ['Weapon', 'Weapon', weaponTypes],
 ], 'type');
 
@@ -148,18 +150,66 @@ function stepBack() {
   filterData();
 }
 
+function buildTextFilterPattern(userInput, isStrictOnly){
+  let textPattern = '';
+  if(isStrictOnly){
+    textPattern  = userInput;
+  } else {
+    textPattern = userInput.split("").reduce((a,b) => { return a+'[^'+b+']*'+b });
+  }
+  let regPattern = textPattern ? textPattern : '.*';
+  log.debug('Filter text pattern:',regPattern);
+  return new RegExp(regPattern,'i');
+}
+
+function testRegExBuilder(){
+  function runTest(item, testStr){
+    log.debug(item,'->','"'+testStr+'"','?',item.test(testStr));
+  }
+  let a1 = buildTextFilterPattern('abcd');
+  let a2 = buildTextFilterPattern('abcd',true);
+  let b1 = buildTextFilterPattern('bananas');
+  let b2 = buildTextFilterPattern('bananas',true);
+  runTest(a1,'alabama clydesdale');
+  runTest(a2,'alabama clydesdale');
+  runTest(a2,'gogo fabcde fgsfds');
+  runTest(b1,'bo ar no ae ne far times');
+  runTest(b1,'bo ar aaaaaaano ae ne far times');
+  runTest(b2,'bo ar no ae ne far times');
+  runTest(b2,'everyone loves bananas!!');
+}
+// testRegExBuilder();
+
+function runTextFilter(dataIn) {
+  if (!textFilter) { //if it's empty we don't need to do anything
+    return dataIn;
+  }
+  let pattern = buildTextFilterPattern(textFilter, isTextFilterStrict);
+  return dataIn.filter(item => {
+    return pattern.test(item.name)
+  });
+}
+
 function filterData() {
   let filtered = data.filter(item => {
     return mainCategories.filter(item, selectedFilters);
   });
   log.debug('filtered!',filtered);
-  dispatch('filtered',filtered);
+
+  let fullyFiltered = runTextFilter(filtered);
+
+  dispatch('filtered',fullyFiltered);
 }
 
 afterUpdate( function(){
   filterData();
 });
 
+function onKeyUp(e) {
+  if (e.key === 'Escape') {
+    textFilter = '';
+  }
+}
 
 </script>
 
@@ -189,6 +239,27 @@ afterUpdate( function(){
     color: #b00;
     cursor: pointer;
   }
+
+  .search-container {
+    display:inline-block;
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    position: relative;
+  }
+
+  .search-container .search-icon {
+    height: 1.25em;
+    width: 1.25em;
+    position: absolute;
+    left: 0.45em;
+    top: 0.45em;
+  }
+
+  .search-input {
+    width: 100%;
+    padding-left:2em;
+  }
 </style>
 
 <div class="filters">
@@ -214,4 +285,11 @@ afterUpdate( function(){
     </li>
   {/if}
   </ul>
+  <p class="search-box">
+    <span class="search-container">
+      <input class="search-input" bind:value={textFilter} on:keyup={onKeyUp} on:change={filterData} type="text" placeholder="Thunderfury"/>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Vector_search_icon.svg" alt="search icon" class="search-icon"/>
+    </span>
+    <span class="chiggity-check"><label><input type="checkbox" bind:checked={isTextFilterStrict}/> Strict match only</label></span>
+  </p>
 </div>

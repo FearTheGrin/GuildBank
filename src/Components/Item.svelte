@@ -21,6 +21,9 @@
   <td>
     <a href="https://classic.wowhead.com/item={item.id}" target="_blank" class="q{item.rarity}" domain="classic" data-wowhead="item={item.id}">[{item.name}]</a>
   </td>
+  <td>{item.type}</td>
+  <td>{item.subType}</td>
+  <td>{item.minLevel ? item.minLevel : '-'}</td>
   {#if window.testing}
     <td><pre>{JSON.stringify(item)}</pre></td>
   {/if}
