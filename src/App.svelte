@@ -7,14 +7,17 @@
 	import ItemList from './Components/ItemList.svelte';
 	import Filter from  './Components/Filter.svelte';
 
-	let title = 'Guild Bank Prototype (EARLY WIP)';
+	let title = 'Grin Bank';
 
 	let { bank, gold, updated } = data;
 	updated = updated * 1000;
 
 	let itemKeys = {};
 	let bags = {bank: [], inventory: []};
+	let maxCapacity = 0;
+	let usedCapacity = 0;
 	for (let bag of bank) {
+		maxCapacity += bag.capacity;
 		let contents = bag.contents;
 		// skip if it is an object ( e.g. {} ) because it has nothing in it.
 		if (contents.constructor !== Array){
@@ -22,6 +25,7 @@
 		}
 
 		for (let item of contents) {
+			usedCapacity += 1;
 			if (!itemKeys[item.id]) {
 				itemKeys[item.id] = {
 					equipLoc:item.equipLoc,
@@ -74,6 +78,25 @@
 
 	let moment = window.moment;
 
+	function getPercentFree() {
+		return 100 - Math.floor(usedCapacity / maxCapacity * 100);
+	}
+
+	function getCapacityClass(){
+		let percentFree = getPercentFree(),
+				percentLeft
+		if (percentFree < 10) {
+			return 'danger';
+		}
+		if (percentFree < 25) {
+			return 'warn';
+		}
+		if (percentFree < 75) {
+			return 'info';
+		}
+		return 'success';
+	}
+
 	onMount(reloadLinks);
 	// afterUpdate(reloadLinks);
 </script>
@@ -94,6 +117,37 @@
 	.copper {
 		color:  chocolate;
 	}
+
+	.danger {
+		color: #cd5c5c;
+	}
+
+	.warn {
+		color: #ffbc00;
+	}
+
+	.info {
+		color: #87ceeb;
+	}
+
+	.success {
+		color: #98fb98;
+	}
+
+	.column {
+		display: inline-block;
+		margin-right: 5em;
+	}
+
+	.needs h4 {
+		margin-bottom: 0;
+		text-decoration: underline;
+	}
+
+	ul {
+		margin-top: 0.2em;
+		padding-left: 1.5em;
+	}
 </style>
 
 <div class="container">
@@ -102,11 +156,42 @@
 	</h1>
 	<h5>Last Updated: { moment(updated).fromNow() }</h5>
 	<h3>
-		Coffers:
-		{gold.gold}<span class="gold">g</span>
-		{gold.silver}<span class="silver">s</span>
-		{gold.copper}<span class="copper">c</span>
+		<span class="column">
+			Coffers:
+			{gold.gold}<span class="gold">g</span>
+			{gold.silver}<span class="silver">s</span>
+			{gold.copper}<span class="copper">c</span>
+		</span>
+		<span class="column">
+				Available Space:
+				<span class="{getCapacityClass()}">
+					{maxCapacity - usedCapacity}/{maxCapacity}
+					({getPercentFree()}%)
+				</span>
+		</span>
 	</h3>
+	<div class="needs">
+		<h4 class="danger">Urgent Needs</h4>
+		<ul>
+			<li>6 big bags (
+				<a href="https://classic.wowhead.com/item=14155" target="_blank"
+					class="q2" domain="classic" data-wowhead="item=14155">
+						[Mooncloth Bag]
+				</a> or
+				<a href="https://classic.wowhead.com/item=4500" target="_blank"
+					class="q2" domain="classic" data-wowhead="item=4500">
+						[Traveler's Backpack]
+				</a>
+			)</li>
+			<li>People to send all these books and recipes to.</li>
+		</ul>
+	</div>
+	<div class="needs">
+		<h4>General Needs</h4>
+		<ul>
+			<li>Gold</li>
+		</ul>
+	</div>
 	{#if items && items.length}
 		<Filter data={items} on:filtered={onFiltered}></Filter>
 		<ItemList items={itemsShown}></ItemList>

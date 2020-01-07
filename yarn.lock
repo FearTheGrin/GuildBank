@@ -3875,6 +3875,17 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
+lua-json@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/lua-json/-/lua-json-1.0.0.tgz#915b3271426674a4917a6d3e6f97988f6e917739"
+  dependencies:
+    lodash "^4.17.11"
+    luaparse "^0.2.1"
+
+luaparse@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/luaparse/-/luaparse-0.2.1.tgz#aa8f56132b0de97d37f3c991a9df42e0e17f656c"
+
 magic-string@^0.25.2:
   version "0.25.3"
   resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.25.3.tgz#34b8d2a2c7fec9d9bdf9929a3fd81d271ef35be9"
