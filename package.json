@@ -36,9 +36,7 @@
     "dev": "run-p start:dev autobuild",
     "start": "sirv public --single",
     "start:dev": "sirv public --single --dev",
-    "unit": "node --no-warnings ./src/Services/Testing/ZenTest.js",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "unit": "node --no-warnings ./src/Services/Testing/ZenTest.js"
   },
   "ava": {
     "require": [

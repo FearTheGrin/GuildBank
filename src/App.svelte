@@ -1,11 +1,11 @@
 <script>
 	import { onMount } from 'svelte';
 	import { beforeUpdate, afterUpdate } from 'svelte';
-	import data from './data.js';
-
 
 	import ItemList from './Components/ItemList.svelte';
 	import Filter from  './Components/Filter/Filter.svelte';
+
+	let data = window.Grin.bankData;
 
 	let title = 'Grin Bank';
 
@@ -179,7 +179,7 @@
 <div class="container">
 	<h1 class="branding">
 		<img class="logo"
-			src="img/grin-banner.jpg"
+			src="./img/grin-banner.jpg"
 			alt="Black Tooth Grin banner"/>
 		{title}
 	</h1>

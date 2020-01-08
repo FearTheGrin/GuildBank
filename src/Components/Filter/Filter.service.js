@@ -8,6 +8,10 @@ export default class FilterService extends Service{
     super('FilterService',config);
   }
 
+  getFilterEntries(selectedFilters) {
+    return mainCategories.getFilterEntries(selectedFilters);
+  }
+
   buildTextFilterPattern(userInput, isStrictOnly){
     let textPattern = '';
     if(isStrictOnly){

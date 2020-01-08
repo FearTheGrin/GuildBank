@@ -7,6 +7,8 @@ import {LogLevels} from '../../Services/Logger.service';
 
 // data modules
 import { mainCategories } from '../../Models/Filter/Filter.data.js';
+import FilterService from './Filter.service';
+const filterService = new FilterService();
 
 // components
 import ToggleSwitch from '../ToggleSwitch.svelte';
@@ -21,8 +23,6 @@ export let data = [];
 let selectedFilters = [];
 let textFilter = '';
 let isTextFilterStrict = false;
-
-
 
 function testIt(item, path){
   log.debug('testing',item.name, JSON.stringify(path));
@@ -62,14 +62,14 @@ let activeFilterOptions = mainCategories.getFilterEntries(selectedFilters);
 function changeFilterOption() {
   selectedFilters = selectedFilters.concat([currentSelectedItem]);
   currentSelectedItem = "";
-  activeFilterOptions = mainCategories.getFilterEntries(selectedFilters);
+  activeFilterOptions = filterService.getFilterEntries(selectedFilters);
   filterData();
   log.debug('selectedFilters',selectedFilters);
 }
 
 function stepBack() {
   selectedFilters = selectedFilters.slice(0,selectedFilters.length - 1);
-  activeFilterOptions = mainCategories.getFilterEntries(selectedFilters);
+  activeFilterOptions = filterService.getFilterEntries(selectedFilters);
   filterData();
 }
 
@@ -91,14 +91,8 @@ function testRegExBuilder(){
 }
 // testRegExBuilder();
 
-function filterData(data, selectedFilters) {
-  let filtered = data.filter(item => {
-    return mainCategories.filter(item, selectedFilters);
-  });
-  log.debug('filtered!',filtered);
-
-  let fullyFiltered = runTextFilter(filtered);
-
+function filterData() {
+  let fullyFiltered = filterService.filter(data, selectedFilters, textFilter, isTextFilterStrict);
   dispatch('filtered',fullyFiltered);
 }
 
@@ -191,7 +185,7 @@ function onKeyUp(e) {
       <input class="search-input" bind:value={textFilter} on:keyup={onKeyUp} on:change={filterData} type="text" placeholder="Thunderfury"/>
       <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Vector_search_icon.svg" alt="search icon" class="search-icon"/>
     </span>
-    <ToggleSwitch bind:checked={isTextFilterStrict} label='Strict Match'></ToggleSwitch>
+    <!-- <ToggleSwitch bind:checked={isTextFilterStrict} label='Strict Match'></ToggleSwitch> -->
     <span class="chiggity-check"><label><input type="checkbox" bind:checked={isTextFilterStrict}/> Strict match only</label></span>
   </p>
 </div>
