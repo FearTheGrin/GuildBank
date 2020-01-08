@@ -5,7 +5,7 @@
 
 
 	import ItemList from './Components/ItemList.svelte';
-	import Filter from  './Components/Filter.svelte';
+	import Filter from  './Components/Filter/Filter.svelte';
 
 	let title = 'Grin Bank';
 
@@ -103,7 +103,7 @@
 
 <style>
 	.container {
-		padding: 50px;
+		padding: 1em 2.5em;
 	}
 
 	.gold {
@@ -139,8 +139,12 @@
 		margin-right: 5em;
 	}
 
+	.needs {
+		margin: 0.2em 0;
+	}
+
 	.needs h4 {
-		margin-bottom: 0;
+		margin: 0;
 		text-decoration: underline;
 	}
 
@@ -148,13 +152,38 @@
 		margin-top: 0.2em;
 		padding-left: 1.5em;
 	}
+
+	h3 {
+		margin: 0.5em 0;
+	}
+
+	.branding {
+		box-sizing: border-box;
+		font-size: 3em;
+		margin: 0 0 0.1em -0.4em;
+	}
+
+	img.logo {
+		vertical-align: middle;
+		border: 1px solid #aaa;
+		border-radius: 0.2em;
+		width: 1em;
+		margin-bottom: 0.2em;
+	}
+
+	.last-updated {
+		margin: 0;
+	}
 </style>
 
 <div class="container">
-	<h1>
+	<h1 class="branding">
+		<img class="logo"
+			src="img/grin-banner.jpg"
+			alt="Black Tooth Grin banner"/>
 		{title}
 	</h1>
-	<h5>Last Updated: { moment(updated).fromNow() }</h5>
+	<h5 class="last-updated">Last Updated: { moment(updated).fromNow() }</h5>
 	<h3>
 		<span class="column">
 			Coffers:

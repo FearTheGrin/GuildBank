@@ -1,4 +1,4 @@
-import Logger from '../Services/Logger.service';
+import Logger from '../../Services/Logger.service';
 
 export class FilterEntry {
   constructor(displayName, value, targetProperty) {

@@ -1,0 +1,1 @@
+window.Grin = window.Grin || {}; window.Grin.bankData = {"bags":{"stuff":5,"things":7}};

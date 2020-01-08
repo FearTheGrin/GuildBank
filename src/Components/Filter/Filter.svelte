@@ -1,9 +1,15 @@
 <script>
 import { createEventDispatcher, afterUpdate } from 'svelte';
 
-import { FilterList } from '../Models/Filter.model.js';
-import Logger from '../Services/Logger.service';
-import {LogLevels} from '../Services/Logger.service';
+// utils
+import Logger from '../../Services/Logger.service';
+import {LogLevels} from '../../Services/Logger.service';
+
+// data modules
+import { mainCategories } from '../../Models/Filter/Filter.data.js';
+
+// components
+import ToggleSwitch from '../ToggleSwitch.svelte';
 
 const log = new Logger('Filter Component');
 // log.setLogLevel(LogLevels.debug);
@@ -16,87 +22,7 @@ let selectedFilters = [];
 let textFilter = '';
 let isTextFilterStrict = false;
 
-const weaponTypes = new FilterList('Weapon', [
-  ['One-Handed Axes','One-Handed Axes'],
-  ['Two-Handed Axes', 'Two-Handed Axes'],
-  ['Bows', 'Bows'],
-  ['Guns', 'Guns'],
-  ['One-Handed Maces', 'One-Handed Maces'],
-  ['Two-Handed Maces', 'Two-Handed Maces'],
-  ['Polearms', 'Polearms'],
-  ['One-Handed Swords', 'One-Handed Swords'],
-  ['Two-Handed Swords', 'Two-Handed Swords'],
-  ['Warglaives', 'Warglaives'],
-  ['Staves', 'Staves'],
-  ['Fist Weapons', 'Fist Weapons'],
-  ['Miscellaneous', 'Miscellaneous'],
-  ['Daggers', 'Daggers'],
-  ['Thrown', 'Thrown'],
-  ['Spears', 'Spears'],
-  ['Crossbows', 'Crossbows'],
-  ['Wands', 'Wands'],
-  ['Fishing Poles', 'Fishing Poles']
-], 'subType');
 
-
-let armorSlots = new FilterList('Slot', [
-  ["Head", "INVTYPE_HEAD"],
-  ["Neck", "INVTYPE_NECK"],
-  ["Shoulder", "INVTYPE_SHOULDER"],
-  ["Shirt", "INVTYPE_BODY"],
-  ["Chest", "INVTYPE_CHEST"],
-  ["Chest", "INVTYPE_ROBE"],
-  ["Waist", "INVTYPE_WAIST"],
-  ["Legs", "INVTYPE_LEGS"],
-  ["Feet", "INVTYPE_FEET"],
-  ["Wrist", "INVTYPE_WRIST"],
-  ["Hands", "INVTYPE_HAND"],
-  ["Fingers", "INVTYPE_FINGER"],
-  ["Trinkets", "INVTYPE_TRINKET"],
-  ["Cloaks", "INVTYPE_CLOAK"],
-  ["Shield", "INVTYPE_SHIELD"],
-  ["Held", "INVTYPE_HOLDABLE"],
-  ["Relics", "INVTYPE_RELIC"],
-  ["Tabard", "INVTYPE_TABARD"]
-], 'equipLoc');
-
-let armorSubs = new FilterList('ArmorSubType',[
-  ["Miscellaneous", "Miscellaneous", armorSlots],
-  ["Cloth","Cloth", armorSlots],
-  ["Leather","Leather", armorSlots],
-  ["Mail","Mail", armorSlots],
-  ["Plate","Plate", armorSlots],
-  ["Cosmetic","Cosmetic", armorSlots],
-  ["Shields","Shields"],
-  ["Librams","Librams"],
-  ["Idols","Idols"],
-  ["Totems","Totems"],
-  ["Sigils","Sigils"],
-  ["Relic","Relic"]
-], 'subType');
-
-let recipeSubtypes = new FilterList('RecipeSubType',[
-  ['Cooking'],
-  ['First Aid'],
-  ['Alchemy'],
-  ['Blacksmithing'],
-  ['Enchanting'],
-  ['Engineering'],
-  ['Leatherworking'],
-  ['Tailoring'],
-  ['Book']
-
-], 'subType');
-
-const mainCategories = new FilterList('Type', [
-  ['Armor', 'Armor', armorSubs],
-  ['Container', 'Container'],
-  ['Recipe', 'Recipe', recipeSubtypes],
-  ['Trade Goods', ['Trade Goods','Reagent']],
-  ['Weapon', 'Weapon', weaponTypes],
-], 'type');
-
-log.debug(mainCategories);
 
 function testIt(item, path){
   log.debug('testing',item.name, JSON.stringify(path));
@@ -104,12 +30,10 @@ function testIt(item, path){
 }
 
 function testItemFiltering(){
-  let testItem1 = {name: 'testWand', type: 'Weapon', subType: 'Wands'};
   testIt(testItem1, ['Armor','Wands']);
   testIt(testItem1, ['Weapon','Wands']);
   testIt(testItem1, ['Weapon','Daggers']);
 
-  let testItem2 = {"equipLoc":"INVTYPE_BODY", "type":"Armor", "rarity":1, "slot":11, "subType":"Miscellaneous", "name":"Stylish Black Shirt"}
   // testIt(testItem2, ['Weapon']);
   // testIt(testItem2, ['Armor']);
   testIt(testItem2, ['Armor', 'Miscellaneous']);
@@ -117,7 +41,6 @@ function testItemFiltering(){
   // testIt(testItem2, ['Armor', 'Miscellaneous', 'Shirt']);
   // testIt(testItem2, ['Armor', 'Miscellaneous', 'Tabard']);
 
-  // let testItem3 = {"type":"Recipe","rarity":2,"slot":11,"id":4408,"subType":"Engineering","count":1,"name":"Schematic: Mechanical Squirrel","icon":134942};
   // testIt(testItem3, ['Weapon']);
   // testIt(testItem3, ['Recipe']);
   // testIt(testItem3, ['Recipe','Tailoring']);
@@ -150,18 +73,6 @@ function stepBack() {
   filterData();
 }
 
-function buildTextFilterPattern(userInput, isStrictOnly){
-  let textPattern = '';
-  if(isStrictOnly){
-    textPattern  = userInput;
-  } else {
-    textPattern = userInput.split("").reduce((a,b) => { return a+'[^'+b+']*'+b });
-  }
-  let regPattern = textPattern ? textPattern : '.*';
-  log.debug('Filter text pattern:',regPattern);
-  return new RegExp(regPattern,'i');
-}
-
 function testRegExBuilder(){
   function runTest(item, testStr){
     log.debug(item,'->','"'+testStr+'"','?',item.test(testStr));
@@ -180,17 +91,7 @@ function testRegExBuilder(){
 }
 // testRegExBuilder();
 
-function runTextFilter(dataIn) {
-  if (!textFilter) { //if it's empty we don't need to do anything
-    return dataIn;
-  }
-  let pattern = buildTextFilterPattern(textFilter, isTextFilterStrict);
-  return dataIn.filter(item => {
-    return pattern.test(item.name)
-  });
-}
-
-function filterData() {
+function filterData(data, selectedFilters) {
   let filtered = data.filter(item => {
     return mainCategories.filter(item, selectedFilters);
   });
@@ -290,6 +191,7 @@ function onKeyUp(e) {
       <input class="search-input" bind:value={textFilter} on:keyup={onKeyUp} on:change={filterData} type="text" placeholder="Thunderfury"/>
       <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Vector_search_icon.svg" alt="search icon" class="search-icon"/>
     </span>
+    <ToggleSwitch bind:checked={isTextFilterStrict} label='Strict Match'></ToggleSwitch>
     <span class="chiggity-check"><label><input type="checkbox" bind:checked={isTextFilterStrict}/> Strict match only</label></span>
   </p>
 </div>

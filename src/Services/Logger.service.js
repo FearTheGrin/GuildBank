@@ -7,10 +7,10 @@ export const LogLevels = {
 };
 Object.freeze(LogLevels);
 
-export default class Logger {
-  constructor(name){
+class Logger {
+  constructor(name, logLevel){
     this.name = name;
-    this.logLevel = window.logLevel;
+    this.logLevel = logLevel || 1;
   }
 
   setLogLevel(logLevel) {
@@ -19,7 +19,7 @@ export default class Logger {
 
   printToConsole(fn, level, argsIn) {
     let args = argsIn ? Array.prototype.slice.apply(argsIn) : Array.prototype.slice.apply(arguments, [2]);
-    if (level <= this.logLevel) {
+    if (level <= this.logLevel && !global.testing) {
       console[fn].apply(console, [`[${this.name}]`].concat(args));
     }
   }
@@ -44,3 +44,4 @@ export default class Logger {
     this.printToConsole.apply(this, ['debug',LogLevels.debug, arguments]);
   }
 }
+export default Logger;
