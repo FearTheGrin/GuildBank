@@ -202,7 +202,7 @@
 	<div class="needs">
 		<h4 class="danger">Urgent Needs</h4>
 		<ul>
-			<li>6 big bags (
+			<li>5 big bags (
 				<a href="https://classic.wowhead.com/item=14155" target="_blank"
 					class="q2" domain="classic" data-wowhead="item=14155">
 						[Mooncloth Bag]
